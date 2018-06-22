@@ -107,7 +107,7 @@ class RedisOut(OutputModule):
                 if not data:
                     return
                 self.pushcmd(dst, event.get(self.selection))
-                self.logging.warn("Added data to redis: {}".format(data))
+                self.logging.debug("Added data to redis: {}".format(data))
         except Exception as error:
                 self.logging.crit(
                     "Falied to set key in Redis. Reason: {}".format(error)
